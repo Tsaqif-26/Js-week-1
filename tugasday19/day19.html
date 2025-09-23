@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1. -->
+    <button onclick="alert('Halo')">click</button>  
+
+    <!-- 2. -->
+     <img onclick="this.src = '/random/mushroom.png'"  src="/random/Upil.jpg" alt="">
+
+     <!-- 3. -->
+      <p ondblclick="this.innerText = 'Double Clicked'">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, deleniti.</p>
+
+      <!-- 4. -->
+       <input type="text" onfocus="this.placeholder = 'Tulis Disini...'">
+
+       <!-- 5. -->
+        <button onmousedown="this.innerText = 'Ini Mousedown'" onmouseup="this.innerText = 'Ini Mouseup'">Pencet Aja</button>
+
+        <!-- 6. -->
+         <button id="btn">click</button>
+         <p id="msg">Lorem ipsum dolor sit amet.</p>
+
+         <!-- 7. -->
+          <div id="area" >hj</div>
+
+          <!-- 8. -->
+           <input type="text" id="input">
+           <span id="show"></span>
+
+           <!-- 9. -->
+            <button id="b">klik</button>
+
+            <!-- 10. -->
+             <button id="bn">kilik</button>
+             <p id="p"></p>
+
+             <!-- 11. -->
+              <button id="butt">pencettt</button>
+              <p id="s1">teks</p>
+              
+              <!-- 13. -->
+               <form action="" id="form">
+                <input type="text" id="ip">
+                <button id="sub">Submit</button>
+               </form>
+
+               <!-- 14. -->
+                <ul id="ul">
+                    <li>
+                        Satu
+                    </li>
+                </ul>
+
+                <!-- 15 -->
+                 <button id="klik">Click!!!</button>
+          
+
+
+
+
+
+
+        <script>
+            // 6.
+        document.getElementById("btn").onclick = function () {
+            document.getElementById("msg").innerText = "Random"
+        }
+
+        // 7.
+       let area = document.getElementById("area");
+        area.onmouseover = function(){
+            area.style.backgroundColor = "green" }
+        area.onmouseout = function(){
+            area.style.backgroundColor = "blue" }
+
+            // 8.
+            let inp = document.getElementById("input")
+            let sp = document.getElementById("show")
+
+            inp.oninput = function(){
+                sp.textContent = this.value
+            }
+
+            // 9.
+           let but = document.getElementById("b");
+           but.onclick = function(){
+            this.disabled = true
+           }
+
+        //10.
+        let bn = document.getElementById("bn")
+        let p = document.getElementById("p")
+        bn.onclick = function(){
+            p.textContent = "Pertama"
+            p.textContent = "Kedua"
+        }
+
+        // 11.
+        let butt = document.getElementById("butt")
+        let s1   = document.getElementById("s1")
+
+        function hapus() {
+            console.log("Log")}
+
+        butt.addEventListener("click",() => document.getElementById("s1").style.color = "yellow")
+        butt.addEventListener("click",hapus)
+
+        // 12.
+        butt.removeEventListener("click",hapus)
+        console.log("Dihapus");
+
+        // 13.
+        let form = document.getElementById("form")
+        form.addEventListener("submit",function(e){e.preventDefault()
+            console.log(document.getElementById("ip").value)
+        })
+        
+        // 14.
+        let ul = document.getElementById("ul")
+        ul.addEventListener("click",function(e){
+            if(e.target.tagName === "LI"){
+                e.target.textContent = "Kilk"
+            }
+        })
+
+        // 15.
+        let btn = document.getElementById("klik")
+        btn.addEventListener("click",() => alert("Sekali Pencet"),{once: true})
+
+       
+        </script>
+</body>
+</html>
