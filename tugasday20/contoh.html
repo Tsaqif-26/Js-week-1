@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Form pendaftaran</h2>
+
+    <form id="form">
+        Nama: <input type="text"  id="nama">
+        Email: <input type="email" id="email">
+        Password: <input type="password" id="password">
+        <button type="submit">Daftar</button>
+    </form>
+    <p id="err" style="color: red;"></p>
+
+    <script>
+        document.getElementById("form").addEventListener("submit",function (e){
+            e.preventDefault()
+
+            let nama = document.getElementById("nama").value.trim()
+            let email = document.getElementById("email").value.trim()
+            let password = document.getElementById("password").value
+            let error = document.getElementById("err")
+
+        if (nama === "" || email === "" || password === "") {
+            error.innerText = "Form harus di isi"
+        } else if (!email.includes("@")) {
+            error.innerText = "Email harus di isi"
+        }else if (password.length < 8) {
+            error.innerText = "Password kurang panjang"
+        } else {
+            error.style.color = "green"
+            error.innerText = "Pendaftaran Berhasil"
+        }
+        })
+    </script>
+</body>
+</html>
