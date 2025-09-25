@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nama">
+    <button id="simpan" onclick="simpan()">Simpan</button>
+    <button id="hapus" onclick="hapus()">Hapus</button>
+
+    <p id="teks"></p>
+
+    <script>
+
+        // LATIHAN LOCAL STORAGE
+
+        function simpan(){
+            let nama = document.getElementById("nama").value
+            localStorage.setItem('nama',nama)
+            document.getElementById("teks").innerHTML = "Tersimpan" 
+        }
+
+        let hasil = localStorage.getItem('nama')
+            if (hasil) {
+                document.getElementById("teks").innerText = "Welcome " + hasil
+            }
+
+        function hapus(){
+            localStorage.removeItem('nama')
+            document.getElementById('teks').innerHTML = "Terhapus"
+        }
+
+
+        // LATIHAN SESSION STORAGE
+
+        // function simpan(){
+        //     let guest = document.getElementById("nama").value
+        //     sessionStorage.setItem("guest",guest)
+        //     document.getElementById('teks').innerHTML = "Ini Akun Guest" 
+        // }
+
+        // let hasil = sessionStorage.getItem('guest')
+        // if (hasil) {
+        //     document.getElementById("teks").innerText = "Hello " + hasil
+        // }
+
+        // function hapus(){
+        //     sessionStorage.removeItem('guest')
+        //     document.getElementById('teks').innerHTML = "Akun Dihapus"
+        // }
+
+    </script>
+</body>
+</html>

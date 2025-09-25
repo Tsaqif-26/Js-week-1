@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputNama" placeholder="masukkan nama">
+    <button id="btnSimpan" onclick="simpan()">Simpan</button>
+    <button id="btnHapus" onclick="hapus()">Hapus</button>
+
+    <p id="hasil"></p>
+
+    <script> 
+
+        // SESSION STORAGE (CUMA SEMENTARA,SAAT TAB DITUTUP ,HILANG)        
+
+    // function simpan() {
+    //     let nama = document.getElementById('inputNama').value;
+    //     sessionStorage.setItem('nama', nama);
+    //     document.getElementById('hasil').innerHTML = 'Data disimpan';
+    // }
+    // const namasimpan = sessionStorage.getItem('nama')
+    //     if(namasimpan){
+    //         document.getElementById('hasil').innerText = 'Selamat datang, ' + namasimpan 
+    //     }
+    // function hapus() {
+    //     sessionStorage.removeItem('nama');
+    //     document.getElementById('hasil').innerHTML = 'Data dihapus';
+    // }
+
+        // LOCAL STORAGE (TETAP ADA WALAU TAB SUDAH DITUTUP)
+
+    function simpan() {
+        let nama = document.getElementById('inputNama').value;
+        localStorage.setItem('nama', nama);
+        document.getElementById('hasil').innerHTML = 'Data disimpan';
+    }
+    const namasimpan = localStorage.getItem('nama')
+        if(namasimpan){
+            document.getElementById('hasil').innerText = 'Selamat datang, ' + namasimpan 
+        }
+    function hapus() {
+        localStorage.removeItem('nama');
+        document.getElementById('hasil').innerHTML = 'Data dihapus';
+    }
+
+
+    // CONTOH DASAR
+
+    // menyimpan
+// localStorage.setItem('nama', 'budi')        //DIISI KEY DAN VALUE
+// localStorage.setItem('umur', 20)
+
+// mengambil
+// localStorage.getItem('nama')             //DIISI KEY
+// localStorage.getItem('umur')
+
+// menghapus
+// localStorage.removeItem('nama')       //DIISI KEY
+
+// menghapus semua
+// localStorage.clear()
+
+
+// Simpan array
+let fruits = ["apel", "mangga", "pisang"];
+localStorage.setItem("buah", JSON.stringify(fruits));
+
+// Ambil array
+let data = JSON.parse(localStorage.getItem("buah"));
+console.log(data[0]); 
+
+
+    </script>
+</body>
+</html>
