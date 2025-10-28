@@ -16,7 +16,9 @@ function App() {
 
      <nav className="bg-gray-100 shadow-md py-4 px-6 flex justify-between items-center transition-colors duration-300">
   <div className="text-2xl font-bold text-indigo-600 ">
-    <Link to='/products'>Tokoku</Link>
+    
+    
+    <Link to='/products'>Tokoku</Link>       
   </div>
 
   <div className="flex gap-4 items-center">
