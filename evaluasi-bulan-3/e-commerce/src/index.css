@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* Wrapper untuk semua halaman */
+.app-wrapper {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navbar */
+nav {
+  background-color: var(--nav-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Warna teks di navbar dark mode biar tetap kontras */
+[data-theme="dark"] nav {
+  color: #f1f5f9; /* teks jadi putih kebiruan */
+}
+
+
+/* Area konten (Products, Login, dll) */
+.page-content {
+  background-color: var(--content-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Card produk, form login, dsb */
+.card {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 0.5rem;
+}

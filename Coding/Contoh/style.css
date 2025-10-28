@@ -1,0 +1,28 @@
+
+#judul {
+    color: darkslategray;
+    font-weight:bold;
+    font-style: oblique;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    text-decoration:underline;
+    line-height: 50px;
+    background-color: bisque;
+}
+.isi {
+    color: cadetblue;
+    text-align: center;
+    text-transform: capitalize;
+    font-style: italic;
+    font-weight: 200;
+    font-size:xx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    
+    
+}
+.hayo {
+    color: darkcyan;
+    text-align: center;
+    font-style: italic;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
